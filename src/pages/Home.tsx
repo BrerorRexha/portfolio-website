@@ -1,14 +1,22 @@
-import { Container, Stack, Typography } from '@mui/material'
+import SectionLayout from "../components/layout/SectionLayout";
+import Navbar from "../components/sections/Navbar";
+import Hero from "../components/sections/Hero";
+import Projects from "../components/sections/Projects";
 
 const Home = () => {
   return (
-    <Container maxWidth="lg">
-      <Stack spacing={2} sx={{ py: 6 }}>
-        <Typography variant="h3">Portfolio</Typography>
-        <Typography>Home is wired through TanStack Router.</Typography>
-      </Stack>
-    </Container>
-  )
-}
+    <>
+      <SectionLayout backgroundColor="dark" hasBorder={true} isSticky={true} hasPadding={false}>
+        <Navbar />
+      </SectionLayout>
+      <SectionLayout backgroundColor="dark" hasPadding={false}>
+        <Hero />
+      </SectionLayout>
+      <SectionLayout backgroundColor="light">
+        <Projects />
+      </SectionLayout>
+    </>
+  );
+};
 
-export default Home
+export default Home;
