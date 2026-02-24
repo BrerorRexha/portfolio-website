@@ -14,7 +14,7 @@ const SectionHeader = ({ color, title, subtitle }: SectionHeaderProps) => {
         flexDirection: "column",
         alignItems: "flex-start",
         gap: 1,
-        mb: {xs: 3, sm: 4},
+        mb: { xs: 3, sm: 4 },
       }}
     >
       <Typography
