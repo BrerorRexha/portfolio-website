@@ -52,7 +52,34 @@ const TimelineSection = () => {
       }}
     >
       <Typography sx={timelineTitleStyle}>Timeline</Typography>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          maxHeight: "690px",
+          overflowY: "auto",
+          scrollbarGutter: "stable",
+          mr: `-12px`,
+          pr: `12px`,
+          scrollbarWidth: "thin",
+          scrollbarColor: "#475569 transparent",
+          "&::-webkit-scrollbar": {
+            width: `${8}px`,
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#475569",
+            borderRadius: 999,
+            border: "3px solid transparent",
+            backgroundClip: "content-box",
+          },
+          "&::-webkit-scrollbar-corner": {
+            background: "transparent",
+          },
+        }}
+      >
         {timeline.map((item, key) => (
           <Box key={key}>
             {key !== 0 && (

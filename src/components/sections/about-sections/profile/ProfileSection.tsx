@@ -13,6 +13,7 @@ const heroTextStyle = {
   fontWeight: 400,
   color: "#475569",
   m: 0,
+  lineHeight: '2rem',
 };
 
 const ProfileSection = () => {
@@ -32,7 +33,7 @@ const ProfileSection = () => {
     >
       <Box
         sx={{
-          maxWidth: "50%",
+          flex: 1,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",

@@ -2,7 +2,11 @@ import { Box } from "@mui/material";
 import SectionHeader from "../../layout/SectionHeader";
 import WorkflowStep from "./workflow/WorkflowStep";
 
-const Workflow = () => {
+interface WorkflowProps {
+  isAboutSection?: boolean;
+}
+
+const Workflow = ({ isAboutSection = false }: WorkflowProps) => {
   const workflowSteps = [
     {
       title: "Analysis",
@@ -28,7 +32,7 @@ const Workflow = () => {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           gap: { xs: 3, sm: 5 },
-          alignItems: "flex-start",
+          alignItems: isAboutSection ? "stretch" : "flex-start",
           width: "100%",
         }}
       >
@@ -37,6 +41,7 @@ const Workflow = () => {
             key={key}
             title={step.title}
             description={step.description}
+            isAboutSection={isAboutSection}
           />
         ))}
       </Box>
