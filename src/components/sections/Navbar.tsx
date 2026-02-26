@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { Link } from "@mui/material";
+// import { Link } from "@mui/material";
+import { Link } from "@tanstack/react-router";
 
 const navLinkStyle = {
   color: "#94A3B8",
@@ -21,12 +22,14 @@ const Navbar = () => {
         height: { lg: "72px", xs: "56px" },
       }}
     >
-      <Typography
-        variant="h6"
-        sx={{ color: "#F8FAFC", fontWeight: 600, fontSize: "1.125rem" }}
-      >
-        Breror Rexha
-      </Typography>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Typography
+          variant="h6"
+          sx={{ color: "#F8FAFC", fontWeight: 600, fontSize: "1.125rem" }}
+        >
+          Breror Rexha
+        </Typography>
+      </Link>
       <Box
         sx={{
           display: { xs: "none", sm: "flex" },
@@ -34,28 +37,14 @@ const Navbar = () => {
           gap: 3,
         }}
       >
-        <Link
-          href="mailto:breror.rexha@gmail.com"
-          rel="noopener noreferrer"
-          sx={navLinkStyle}
-        >
-          breror.rexha@gmail.com
+        <Link to="/contact" style={navLinkStyle}>
+          Contact
         </Link>
-        <Link
-          href="https://linkedin.com/in/breror-rexha-0064251a6"
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={navLinkStyle}
-        >
-          LinkedIn
+        <Link to="/about" style={navLinkStyle}>
+          About
         </Link>
-        <Link
-          href="https://github.com/BrerorRexha"
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={navLinkStyle}
-        >
-          GitHub
+        <Link to="/projects" style={navLinkStyle}>
+          Projects
         </Link>
       </Box>
     </Box>

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import SectionHeader from "../layout/SectionHeader";
+import SectionHeader from "../../layout/SectionHeader";
 import WorkflowStep from "./workflow/WorkflowStep";
 
 const Workflow = () => {
@@ -29,7 +29,7 @@ const Workflow = () => {
           flexDirection: { xs: "column", md: "row" },
           gap: { xs: 3, sm: 5 },
           alignItems: "flex-start",
-          width: '100%',
+          width: "100%",
         }}
       >
         {workflowSteps.map((step, key) => (

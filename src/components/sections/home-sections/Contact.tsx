@@ -1,5 +1,5 @@
 import { Box, Typography, Link } from "@mui/material";
-import SectionHeader from "../layout/SectionHeader";
+import SectionHeader from "../../layout/SectionHeader";
 
 const navLinkStyle = {
   color: "#FFFFFF",

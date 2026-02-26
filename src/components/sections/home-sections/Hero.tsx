@@ -10,7 +10,7 @@ const Hero = () => {
         justifyContent: "center",
         width: "100%",
         maxWidth: "650px",
-        height: "90vh",
+        height: "70vh",
         gap: { xs: 3, sm: 4 },
       }}
     >

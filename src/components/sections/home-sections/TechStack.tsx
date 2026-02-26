@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import SectionHeader from "../layout/SectionHeader";
+import SectionHeader from "../../layout/SectionHeader";
 import StackGroup from "./tech-stack/StackGroup";
 
 const TechStack = () => {

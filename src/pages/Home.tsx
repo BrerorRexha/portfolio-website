@@ -1,24 +1,14 @@
 import { Box } from "@mui/material";
-import PageLayout from "../components/layout/PageLayout";
 import SectionLayout from "../components/layout/SectionLayout";
-import Navbar from "../components/sections/Navbar";
-import Hero from "../components/sections/Hero";
-import Projects from "../components/sections/Projects";
-import Workflow from "../components/sections/Workflow";
-import TechStack from "../components/sections/TechStack";
-import Contact from "../components/sections/Contact";
+import Hero from "../components/sections/home-sections/Hero";
+import Projects from "../components/sections/home-sections/Projects";
+import Workflow from "../components/sections/home-sections/Workflow";
+import TechStack from "../components/sections/home-sections/TechStack";
+import Contact from "../components/sections/home-sections/Contact";
 
 const Home = () => {
   return (
-    <PageLayout>
-      <SectionLayout
-        backgroundColor="dark"
-        hasBorder={true}
-        isSticky={true}
-        hasPadding={false}
-      >
-        <Navbar />
-      </SectionLayout>
+    <>
       <SectionLayout backgroundColor="dark" hasPadding={false}>
         <Hero />
       </SectionLayout>
@@ -36,7 +26,7 @@ const Home = () => {
           <Contact />
         </SectionLayout>
       </Box>
-    </PageLayout>
+    </>
   );
 };
 

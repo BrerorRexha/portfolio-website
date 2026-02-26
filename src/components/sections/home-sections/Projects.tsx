@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import SectionHeader from "../layout/SectionHeader";
+import SectionHeader from "../../layout/SectionHeader";
 import ProjectCard from "./projects/ProjectCard";
 import type { Project } from "./projects/ProjectCard";
 
@@ -31,7 +31,7 @@ const Projects = () => {
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           gap: 4,
-          width: '100%',
+          width: "100%",
         }}
       >
         {projects.map((project, key) => (

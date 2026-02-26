@@ -5,7 +5,6 @@ interface ProjectCardChipProps {
 }
 
 const ProjectCardChip = ({ label }: ProjectCardChipProps) => {
-  console.log(label);
   return (
     <Box
       sx={{
