@@ -1,20 +1,13 @@
+// This component has been superseded by src/components/sections/about/ProfileSection.tsx
 import { Box } from "@mui/material";
-import profile from "../../../../assets/profile.jpg";
 
 const ProfileImageCard = () => {
   return (
-    <Box
-      sx={{
-        borderRadius: "32px",
-        flex: 1,
-        position: "relative",
-      }}
-    >
+    <Box sx={{ borderRadius: "32px", flex: 1, position: "relative" }}>
       <img
-        style={{ borderRadius: "24px", width: '100%' }}
-        src={profile}
+        style={{ borderRadius: "24px", width: "100%" }}
+        src="/profile.jpg"
         alt="Profile"
-        className="w-full h-full object-cover"
       />
     </Box>
   );

@@ -1,6 +1,2 @@
-import { createFileRoute } from '@tanstack/react-router'
-import Home from '../pages/Home' 
-
-export const Route = createFileRoute('/')({
-  component: Home,
-})
+// Migrated to Next.js App Router — see src/app/page.tsx
+export {};

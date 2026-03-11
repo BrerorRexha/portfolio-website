@@ -1,32 +1,41 @@
-import { Container, Box } from "@mui/material";
+import { Box, Container } from '@mui/material';
+import { tokens } from '@/theme/theme';
 
 interface SectionLayoutProps {
   children: React.ReactNode;
-  backgroundColor?: "light" | "dark";
-  hasBorder?: boolean;
-  isSticky?: boolean;
-  hasPadding?: boolean;
+  variant?: 'default' | 'dark' | 'elevated';
+  fullHeight?: boolean;
+  noPadding?: boolean;
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl';
 }
+
+const bgMap = {
+  default: tokens.bg.base,
+  dark: tokens.bg.subtle,
+  elevated: tokens.bg.elevated,
+};
 
 const SectionLayout = ({
   children,
-  backgroundColor,
-  hasBorder = false,
-  isSticky = false,
-  hasPadding = true,
+  variant = 'default',
+  fullHeight = false,
+  noPadding = false,
+  maxWidth = 'lg',
 }: SectionLayoutProps) => {
   return (
     <Box
+      component="section"
       sx={{
-        width: "100%",
-        backgroundColor: backgroundColor === "light" ? "#F8FAFC" : "#0F172A",
-        borderBottom: hasBorder ? "1px solid rgba(255,255,255,0.05)" : "none",
-        position: isSticky ? "sticky" : "relative",
-        top: isSticky ? 0 : "auto",
-        zIndex: isSticky ? 1000 : "auto",
+        width: '100%',
+        backgroundColor: bgMap[variant],
+        minHeight: fullHeight ? 'calc(100dvh - 72px)' : undefined,
+        borderBottom: `1px solid ${tokens.border.subtle}`,
       }}
     >
-      <Container maxWidth="lg" sx={{ py: hasPadding ? { xs: 8, sm: 12 } : 0 }}>
+      <Container
+        maxWidth={maxWidth}
+        sx={{ py: noPadding ? 0 : { xs: 8, md: 14 } }}
+      >
         {children}
       </Container>
     </Box>
