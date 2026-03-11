@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# breror.dev — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Breror Rexha — frontend developer from Prishtina, Kosovo. Built to showcase professional work, projects, and technical craft. Designed to grow into a full personal platform over time.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Layer | Technology |
+|---|---|
+| Framework | [Next.js 15](https://nextjs.org/) (App Router) |
+| Language | TypeScript |
+| UI Library | [MUI v7](https://mui.com/) + Emotion |
+| Animations | [Framer Motion](https://www.framer.com/motion/) |
+| Data Fetching | [TanStack Query v5](https://tanstack.com/query) |
+| Fonts | Fraunces · Space Grotesk · Space Mono |
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Run development server
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Build for production
+npm run build
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start production server
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:3000](http://localhost:3000).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx          # Root layout (fonts, theme, providers)
+│   ├── page.tsx            # Home
+│   ├── about/page.tsx      # About
+│   ├── projects/page.tsx   # Projects
+│   └── contact/page.tsx    # Contact
+├── components/
+│   ├── layout/             # Navbar, Footer, PageLayout, SectionLayout
+│   ├── sections/           # Page sections (home, about)
+│   └── ui/                 # Reusable primitives
+├── theme/
+│   └── theme.ts            # MUI theme + design tokens
+└── lib/
+    └── registry.tsx        # Emotion SSR registry for Next.js
+```
+
+## Pages
+
+- **Home** — Hero, tech stack, workflow, projects overview, contact
+- **About** — Profile, career timeline
+- **Projects** — Project showcase with detail
+- **Contact** — Links and reach-out
+
+## Roadmap
+
+- [ ] Projects: Admin Dashboard (React / TS / MUI / TanStack)
+- [ ] Projects: E-Commerce Store
+- [ ] Projects: Kanban Board
+- [ ] Blog / writing section
+- [ ] Admin dashboard for content management
+- [ ] Art & 3D model gallery
