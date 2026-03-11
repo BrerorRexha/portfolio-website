@@ -51,3 +51,6 @@ next-env.d.ts
 *.local
 .vercel
 .turbo
+
+# Local AI context
+CLAUDE.md
