@@ -315,7 +315,7 @@ const Hero = () => {
                 textAlign: 'right',
               }}
             >
-              "Society grows when men plant trees the shade of which they will never sit in."
+              "A society grows great when old men plant trees in whose shade they shall never sit."
             </Typography>
           </Box>
         </motion.div>

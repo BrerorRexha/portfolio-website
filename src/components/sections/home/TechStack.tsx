@@ -12,7 +12,7 @@ const groups = [
       { name: 'TypeScript', highlight: true },
       { name: 'MUI', highlight: true },
       { name: 'TanStack Query', highlight: true },
-      { name: 'TanStack Table', highlight: false },
+      { name: 'TanStack Form', highlight: false },
       { name: 'Next.js', highlight: false },
       { name: 'Vue.js', highlight: false },
       { name: 'Hugo', highlight: false },

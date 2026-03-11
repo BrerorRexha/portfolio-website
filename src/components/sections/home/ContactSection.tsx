@@ -75,21 +75,6 @@ const ContactSection = () => {
               </Typography>
             </Box>
 
-            {/* Quote */}
-            <Box sx={{ pt: 4, borderTop: `1px solid ${tokens.border.subtle}` }}>
-              <Typography
-                sx={{
-                  fontFamily: 'var(--font-fraunces)',
-                  fontStyle: 'italic',
-                  fontSize: { xs: '1rem', md: '1.1rem' },
-                  color: tokens.text.muted,
-                  lineHeight: 1.65,
-                  maxWidth: 420,
-                }}
-              >
-                "Society grows when men plant trees the shade of which they will never sit in."
-              </Typography>
-            </Box>
           </Box>
         </AnimatedSection>
 

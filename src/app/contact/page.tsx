@@ -17,7 +17,7 @@ const links = [
 
 export default function ContactPage() {
   return (
-    <SectionLayout fullHeight>
+    <SectionLayout>
       <SectionHeader label="Reach out" title="Let's Work Together" />
       <Box sx={{ mt: 4, display: 'flex', flexDirection: 'column', gap: 2, maxWidth: 480 }}>
         <Typography sx={{ color: tokens.text.secondary, lineHeight: 1.8, mb: 2 }}>
@@ -44,20 +44,6 @@ export default function ContactPage() {
         ))}
       </Box>
 
-      <Box sx={{ mt: 10, pt: 6, borderTop: `1px solid ${tokens.border.subtle}` }}>
-        <Typography
-          sx={{
-            fontFamily: 'var(--font-fraunces)',
-            fontStyle: 'italic',
-            fontSize: { xs: '1.25rem', md: '1.5rem' },
-            color: tokens.text.secondary,
-            lineHeight: 1.6,
-            maxWidth: 560,
-          }}
-        >
-          "Society grows when men plant trees the shade of which they will never sit in."
-        </Typography>
-      </Box>
     </SectionLayout>
   );
 }

@@ -33,7 +33,7 @@ const Footer = () => {
               lineHeight: 1.65,
             }}
           >
-            "Society grows when men plant trees the shade of which they will never sit in."
+            "A society grows great when old men plant trees in whose shade they shall never sit."
           </Typography>
 
           {/* Right */}
