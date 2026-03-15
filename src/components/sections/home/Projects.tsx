@@ -7,23 +7,29 @@ const projects = [
   {
     title: 'Enterprise Admin Dashboard',
     description:
-      'Scalable admin interface with reusable data tables, role-based UI, analytics visualisation, and structured server state management.',
-    stack: ['React', 'TypeScript', 'MUI', 'TanStack Query', 'TanStack Table', 'Recharts'],
-    status: 'in-progress' as const,
+      'Full-featured admin interface with role-based access control, analytics charts, and CRUD management for products, orders, categories, and users.',
+    stack: ['React', 'TypeScript', 'MUI', 'TanStack Router', 'TanStack Query', 'TanStack Form', 'Recharts'],
+    status: 'live' as const,
+    href: 'https://admin-dashboard-nine-bice-97.vercel.app/dashboard',
+    image: '/projects/admin-1.png',
   },
   {
-    title: 'E-commerce Product Interface',
+    title: 'ShopWave — E-Commerce Store',
     description:
-      'Performant product browsing UI with advanced filtering, cart management, optimised component rendering, and scalable global state.',
-    stack: ['React', 'TypeScript', 'MUI', 'TanStack Query', 'Zustand'],
-    status: 'in-progress' as const,
+      'Full e-commerce storefront with product filtering, search, cart management, multi-step checkout with live card preview, and order history.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'React Router', 'Vite'],
+    status: 'live' as const,
+    href: 'https://e-commerce-project-tawny-psi.vercel.app/',
+    image: '/projects/ecommerce-1.png',
   },
   {
-    title: 'Kanban Board',
+    title: 'FlowBoard — Kanban Board',
     description:
-      'Drag-and-drop task management board with customisable columns, card assignments, and persistent state architecture.',
-    stack: ['React', 'TypeScript', 'MUI', 'TanStack Query', 'dnd-kit'],
-    status: 'in-progress' as const,
+      'Drag-and-drop task management board with sprint planning, analytics sidebar, card assignments, priority labels, and inline editing.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'dnd-kit', 'Framer Motion'],
+    status: 'live' as const,
+    href: 'https://kanban-board-vert-beta.vercel.app/',
+    image: '/projects/kanban-1.png',
   },
 ];
 

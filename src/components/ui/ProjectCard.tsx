@@ -4,17 +4,19 @@ import { Box, Typography, Link } from '@mui/material';
 import { tokens } from '@/theme/theme';
 import { motion } from 'framer-motion';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import Image from 'next/image';
 
 export interface Project {
   title: string;
   description: string;
   stack: string[];
   href?: string;
+  image?: string;
   status?: 'live' | 'in-progress';
   index: number;
 }
 
-const ProjectCard = ({ title, description, stack, href, status = 'in-progress', index }: Project) => {
+const ProjectCard = ({ title, description, stack, href, image, status = 'in-progress', index }: Project) => {
   const isLive = status === 'live';
 
   return (
@@ -49,34 +51,42 @@ const ProjectCard = ({ title, description, stack, href, status = 'in-progress', 
           } : {},
         }}
       >
-        {/* Placeholder image area */}
+        {/* Image / Placeholder area */}
         <Box
           sx={{
             width: '100%',
             height: { xs: 180, md: 220 },
             backgroundColor: tokens.bg.elevated,
             borderBottom: `1px solid ${tokens.border.subtle}`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             position: 'relative',
             overflow: 'hidden',
           }}
         >
-          {/* Ghost number */}
-          <Typography
-            sx={{
-              fontFamily: 'var(--font-fraunces)',
-              fontWeight: 900,
-              fontSize: '8rem',
-              color: tokens.border.subtle,
-              lineHeight: 1,
-              userSelect: 'none',
-              pointerEvents: 'none',
-            }}
-          >
-            {String(index + 1).padStart(2, '0')}
-          </Typography>
+          {image ? (
+            <Image
+              src={image}
+              alt={title}
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          ) : (
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+              <Typography
+                sx={{
+                  fontFamily: 'var(--font-fraunces)',
+                  fontWeight: 900,
+                  fontSize: '8rem',
+                  color: tokens.border.subtle,
+                  lineHeight: 1,
+                  userSelect: 'none',
+                  pointerEvents: 'none',
+                }}
+              >
+                {String(index + 1).padStart(2, '0')}
+              </Typography>
+            </Box>
+          )}
 
           {/* Status badge */}
           <Box
@@ -90,8 +100,9 @@ const ProjectCard = ({ title, description, stack, href, status = 'in-progress', 
               px: 1.5,
               py: 0.6,
               backgroundColor: isLive
-                ? 'rgba(74, 158, 138, 0.15)'
-                : 'rgba(122, 154, 58, 0.12)',
+                ? 'rgba(74, 158, 138, 0.85)'
+                : 'rgba(20, 20, 20, 0.75)',
+              backdropFilter: 'blur(4px)',
               border: `1px solid ${isLive ? tokens.green.teal : tokens.border.default}`,
               borderRadius: 0.5,
             }}
@@ -101,7 +112,7 @@ const ProjectCard = ({ title, description, stack, href, status = 'in-progress', 
                 width: 5,
                 height: 5,
                 borderRadius: '50%',
-                backgroundColor: isLive ? tokens.green.teal : tokens.green.primary,
+                backgroundColor: isLive ? '#fff' : tokens.green.primary,
                 ...(isLive ? {} : {
                   animation: 'pulse 2.5s ease-in-out infinite',
                   '@keyframes pulse': {
@@ -117,7 +128,7 @@ const ProjectCard = ({ title, description, stack, href, status = 'in-progress', 
                 fontSize: '0.62rem',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: isLive ? tokens.green.teal : tokens.green.primary,
+                color: isLive ? '#fff' : tokens.green.primary,
               }}
             >
               {isLive ? 'Live' : 'In Development'}
@@ -125,8 +136,18 @@ const ProjectCard = ({ title, description, stack, href, status = 'in-progress', 
           </Box>
 
           {href && (
-            <Box sx={{ position: 'absolute', top: 14, right: 14 }}>
-              <OpenInNewIcon sx={{ fontSize: 16, color: tokens.text.muted }} />
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 14,
+                right: 14,
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                backdropFilter: 'blur(4px)',
+                borderRadius: 0.5,
+                p: 0.5,
+              }}
+            >
+              <OpenInNewIcon sx={{ fontSize: 14, color: '#fff', display: 'block' }} />
             </Box>
           )}
         </Box>
