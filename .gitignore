@@ -53,4 +53,5 @@ next-env.d.ts
 .turbo
 
 # Local AI context
+.claude
 CLAUDE.md
