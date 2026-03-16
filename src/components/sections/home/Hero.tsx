@@ -84,7 +84,7 @@ const Hero = () => {
                     color: tokens.green.primary,
                   }}
                 >
-                  Frontend Engineer · Prishtina, Kosovo
+                  Frontend Engineer · Prishtina, Kosova
                 </Typography>
               </Box>
             </motion.div>

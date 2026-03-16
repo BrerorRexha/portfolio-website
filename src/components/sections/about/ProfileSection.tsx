@@ -26,8 +26,8 @@ const ProfileSection = () => {
             <Box component="span" sx={{ color: tokens.text.primary, fontWeight: 500 }}>
               23 years old
             </Box>
-            , based in Prishtina, Kosovo, with four years of frontend experience across companies in
-            Kosovo and Berlin. I build systems that are meant to last — clean, scalable, and
+            , based in Prishtina, Kosova, with four years of frontend experience across companies in
+            Kosova and Berlin. I build systems that are meant to last — clean, scalable, and
             easy to reason about.
           </Typography>
           <Typography
@@ -119,7 +119,7 @@ const ProfileSection = () => {
               'School Valedictorian',
               'MENSA Member',
               'Hackathon Winner — JCoders',
-              'Debate Semi-Finalist — Kosovo Open 2018',
+              'Debate Semi-Finalist — Kosova Open 2018',
             ].map((award) => (
               <Box key={award} sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                 <Box

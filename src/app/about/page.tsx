@@ -7,7 +7,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'About — Breror Rexha',
-  description: 'Frontend engineer from Prishtina, Kosovo. 4 years of experience building scalable web systems.',
+  description: 'Frontend engineer from Prishtina, Kosova. 4 years of experience building scalable web systems.',
 };
 
 export default function AboutPage() {

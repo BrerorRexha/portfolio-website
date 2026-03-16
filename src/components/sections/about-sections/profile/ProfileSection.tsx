@@ -41,7 +41,7 @@ const ProfileSection = () => {
       >
         <Typography sx={heroTitleStyle}>Profile</Typography>
         <Typography sx={heroTextStyle}>
-          I’m 23 years old, based in Prishtina, Kosovo. I’m a frontend developer
+          I’m 23 years old, based in Prishtina, Kosova. I’m a frontend developer
           with 4 years of experience. I am driven by structure, ambition, and
           long term growth.
         </Typography>

@@ -6,7 +6,7 @@ import { tokens } from '@/theme/theme';
 
 export const metadata: Metadata = {
   title: 'Contact — Breror Rexha',
-  description: 'Get in touch with Breror Rexha — frontend engineer based in Prishtina, Kosovo.',
+  description: 'Get in touch with Breror Rexha — frontend engineer based in Prishtina, Kosova.',
 };
 
 const links = [

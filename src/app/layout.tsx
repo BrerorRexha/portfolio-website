@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Breror Rexha — Frontend Engineer',
   description:
-    'Frontend engineer based in Prishtina, Kosovo. Building scalable web systems with React, TypeScript, MUI, and TanStack.',
+    'Frontend engineer based in Prishtina, Kosova. Building scalable web systems with React, TypeScript, MUI, and TanStack.',
   openGraph: {
     title: 'Breror Rexha — Frontend Engineer',
     description: 'Frontend engineer building systems meant to outlast the hands that made them.',

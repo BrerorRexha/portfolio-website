@@ -56,10 +56,6 @@ const Chip = ({ name, highlight }: { name: string; highlight: boolean }) => (
       border: `1px solid ${highlight ? tokens.border.strong : tokens.border.subtle}`,
       borderRadius: 0.5,
       transition: 'border-color 0.2s ease, background-color 0.2s ease',
-      '&:hover': {
-        borderColor: tokens.border.strong,
-        backgroundColor: tokens.green.ghost,
-      },
     }}
   >
     <Typography
